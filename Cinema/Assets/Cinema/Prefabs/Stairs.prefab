@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 4759052683561066}
   - component: {fileID: 33403382164255722}
   - component: {fileID: 23850589830027682}
+  - component: {fileID: 5951799640288749175}
+  - component: {fileID: 7715345332270266807}
+  - component: {fileID: 275988787256447664}
+  - component: {fileID: 8864895897988315288}
   m_Layer: 0
   m_Name: Stairs
   m_TagString: Untagged
@@ -82,3 +86,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5951799640288749175
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084879502527724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.002, y: 0.0005073378, z: 0.0019999999}
+  m_Center: {x: 0, y: -0.0007337287, z: -3.0771028e-18}
+--- !u!65 &7715345332270266807
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084879502527724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.002, y: 0.00046208533, z: 0.0014453433}
+  m_Center: {x: 0, y: -0.0002395139, z: -0.00027733014}
+--- !u!65 &275988787256447664
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084879502527724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.002, y: 0.00051250705, z: 0.0009915298}
+  m_Center: {x: 0, y: 0.00025211857, z: -0.00050423614}
+--- !u!65 &8864895897988315288
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084879502527724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.002, y: 0.00048729606, z: 0.00047469017}
+  m_Center: {x: 0, y: 0.0007563573, z: -0.0007626582}
