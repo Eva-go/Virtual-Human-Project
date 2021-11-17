@@ -7,10 +7,9 @@ ScriptsOnlyBuild:
     - MovieSelection
     - MovieTime
     - PlayerController
+    - TextInput
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.Timeline.Editor.dll:
-    - TimelineProjectSettings
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -22,6 +21,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -78,6 +78,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2588}
     - Class: 114
+      Script: {instanceID: 2630}
+    - Class: 114
       Script: {instanceID: 2774}
     - Class: 114
       Script: {instanceID: 2858}
@@ -89,6 +91,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3082}
     - Class: 114
       Script: {instanceID: 3600}
+    - Class: 114
+      Script: {instanceID: 254896}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -470,7 +474,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 6d942c159d4b6f1610e137fa906d2cfb
+      Hash: 640389eeb557ce024f22b6edae3d1242
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InteractionController
@@ -564,6 +568,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 3bae31d7c23a8b67a2aea80915df5f01
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TextInput
+  - hash:
+      serializedVersion: 2
+      Hash: 3bae31d7c23a8b67a2aea80915df5f01
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TextOutput
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

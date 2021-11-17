@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerController : MonoBehaviour
 {
 
@@ -31,6 +30,8 @@ public class PlayerController : MonoBehaviour
     private float crouchPosY;
     private float originPosY;
     private float applyCrouchPosY;
+    //채팅 변수
+    public static  bool isChatting = false;
 
     // 땅 착지 여부
     private CapsuleCollider capsuleCollider;
@@ -53,6 +54,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Transform tf_Crosshair;
 
+    private TextInput textInput;
+
+
     void Start()
     {
         capsuleCollider = GetComponent<CapsuleCollider>();
@@ -60,13 +64,12 @@ public class PlayerController : MonoBehaviour
         applySpeed = walkSpeed;
         originPosY = theCamera.transform.localPosition.y;
         applyCrouchPosY = originPosY;
+        Cursor.visible = false;
     }
     void Update()
     {
-        Cursor.visible = false;
         if (!isKoskPause)
         {
-
             //Time.timeScale = 1;
             IsGround();
             TryJump();
@@ -76,15 +79,24 @@ public class PlayerController : MonoBehaviour
             CameraRotation();
             CharacterRotation();
             CrosshairReturn();
+            Chatting();
         }
         else
         {
-            //Time.timeScale = 0;
+            Debug.Log("크로스헤어무빙");
+            Chatting();
             CrosshairMoving();
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+    }
+    private void Chatting()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            isChatting = !isChatting;
         }
     }
     private void CrosshairReturn()

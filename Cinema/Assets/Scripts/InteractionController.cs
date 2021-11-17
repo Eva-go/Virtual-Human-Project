@@ -13,6 +13,7 @@ public class InteractionController : MonoBehaviour
     [SerializeField] GameObject go_MovieSelection;
     [SerializeField] GameObject go_MovieInformation;
     [SerializeField] GameObject go_MovieTime;
+    [SerializeField] GameObject go_Text;
     // Update is called once per frame
 
     bool isContact = false;
@@ -25,12 +26,34 @@ public class InteractionController : MonoBehaviour
         go_MovieSelection.SetActive(false);
         go_MovieInformation.SetActive(false);
         go_MovieTime.SetActive(false);
+        go_Text.SetActive(false);
 
 
     }
     void Update()
     {
         CheckObject();
+        Chatting();
+    }
+
+    private void Chatting()
+    {
+        if (PlayerController.isChatting)
+        {
+            PlayerController.isKoskPause = !PlayerController.isKoskPause;
+            go_Text.SetActive(true);
+            go_NoramlCrossHair.SetActive(false);
+            Cursor.visible = true;
+
+        }
+        else
+        {
+            
+            go_Text.SetActive(false);
+            go_NoramlCrossHair.SetActive(true);
+            Cursor.visible = false;
+        }
+            
     }
 
     private void CheckObject()
@@ -60,11 +83,11 @@ public class InteractionController : MonoBehaviour
             {
                 React();
                 PlayerController.isKoskPause = !PlayerController.isKoskPause;
-            
-            }
-           
-           
+                Debug.Log(PlayerController.isKoskPause);
+               
+                //PlayerController.isKoskPause = !PlayerController.isKoskPause;
 
+            }
         }
         else
         {
